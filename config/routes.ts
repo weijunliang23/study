@@ -30,6 +30,14 @@ export default [
     component: './Test',
     title: '康特恩后台管理系统',
   },
+
+  {
+    path: '/study',
+    name: 'study',
+    icon: 'smile',
+    component: './Study',
+    title: '学习小知识',
+  },
   {
     path: 'https://www.4399.com',
     target: '_blank',
