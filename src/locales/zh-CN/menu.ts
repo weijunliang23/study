@@ -49,4 +49,6 @@ export default {
   'menu.editor.flow': '流程编辑器',
   'menu.editor.mind': '脑图编辑器',
   'menu.editor.koni': '拓扑编辑器',
+  'menu.4399': '4399',
+  'menu.KTE': '康特恩后台管理系统',
 };

@@ -124,6 +124,7 @@ export default defineConfig({
       // schemaPath: "https://gw.alipayobjects.com/os/antfincdn/M%24jrzTTYJN/oneapi.json"
       schemaPath: join(__dirname, 'oneapi.json'),
       mock: false,
+      // mock: true,
     },
     {
       requestLibPath: "import { request } from '@umijs/max'",

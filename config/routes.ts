@@ -24,6 +24,19 @@ export default [
     ],
   },
   {
+    path: '/test',
+    name: 'KTE',
+    icon: 'smile',
+    component: './Test',
+    title: '康特恩后台管理系统',
+  },
+  {
+    path: 'https://www.4399.com',
+    target: '_blank',
+    name: '4399',
+    icon: 'smile',
+  },
+  {
     path: '/welcome',
     name: 'welcome',
     icon: 'smile',
