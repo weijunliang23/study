@@ -66,9 +66,12 @@
     <div>1</div>
   </div>
   <script>
+    // 1. 获取当前焦点元素
     // const t = document.querySelector('textarea');
     // t.focus();
     // console.log(document.activeElement === t);
+
+    // 2 滚动父元素到当前元素，所以父元素必须有滚动条
     const g = document.querySelector('.gg')
     g.scrollIntoView(true);
   </script>
