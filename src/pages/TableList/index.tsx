@@ -11,7 +11,7 @@ import {
   ProTable,
 } from '@ant-design/pro-components';
 import { FormattedMessage, useIntl } from '@umijs/max';
-import { Button, Drawer, Input, message } from 'antd';
+import {Button, Drawer, Input, message} from 'antd';
 import React, { useRef, useState } from 'react';
 import type { FormValueType } from './components/UpdateForm';
 import UpdateForm from './components/UpdateForm';
@@ -238,7 +238,13 @@ const TableList: React.FC = () => {
           />
         </a>,
       ],
-    },
+    }, {
+      title: <FormattedMessage id="pages.searchTable.changeSwitch" defaultMessage="changeSwitch"/>,
+      dataIndex: 'changeShow',
+      valueType: 'switch',
+      initialValue : true,
+      width: 100
+    }
   ];
 
   return (
