@@ -1,0 +1,24 @@
+<html>
+
+<head>前端中笨蛋</head>
+
+<body>
+  <input id="input_username"></input>
+</body>
+<script type="text/javascript">
+  // 定义模拟事件方法
+  function fireKeyEvent (element, evtType, keyChar) {
+    element.focus();
+    // 红宝书第四版的方法已废弃，应使用构造函数创建
+    const KeyboardEventInit = { key: keyChar, code: "", location: 0, repeat: false, isComposing: false };
+    const evtObj = new KeyboardEvent(evtType, KeyboardEventInit);
+    element.dispatchEvent(evtObj);
+  }
+  // 按键模拟事件不会导致该字母自动出现在文本框中，为了UI显示而已。浏览器出于安全原因设定，来防止脚本模拟与浏览器本身交互的操作，所以在监听keydown事件中增加了input元素赋值
+  const objInput_EL = document.getElementById("input_username");
+  objInput_EL.addEventListener('keydown', function (e) {
+    objInput_EL.value += e.key;
+  }, false);
+
+  fireKeyEvent(objInput_EL, "keydown", "a");
+</script>
