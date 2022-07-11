@@ -51,4 +51,5 @@ export default {
   'menu.editor.koni': '拓扑编辑器',
   'menu.4399': '4399',
   'menu.KTE': '康特恩后台管理系统',
+  'menu.study': '我爱学习',
 };

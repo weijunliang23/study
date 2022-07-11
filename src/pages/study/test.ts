@@ -27,11 +27,11 @@ if(arr_1 && arr_1?.length){
   console.log('___');
 }
 // 4.3 !. 强制判断
-// 4.4 ! 
+// 4.4 !  类里初始未定义
+// 4.5  -? Requires工具类可以将可选变为必选项
 const a = undefined!
 
-
-
-
-
+// 5 _ 允许通过_分割数字提高阅读效率
+const b = 123_3232_33;
+console.log(b === 123323233);
 console.log(Date_result,num_1,num_2,doubleToNumber1,doubleToNumber2,a,arr_1);

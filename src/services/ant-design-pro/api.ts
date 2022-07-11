@@ -51,13 +51,21 @@ export async function rule(
   },
   options?: { [key: string]: any },
 ) {
-  return request<API.RuleList>('/api/rule', {
+  const res =await request<API.RuleList>('/api/rule', {
     method: 'GET',
     params: {
       ...params,
     },
     ...(options || {}),
   });
+  let temp = res?.data?.map(item => {
+    item.changeShow = !!Math.round(Math.random());
+    return item;
+  })
+  return {
+    ...res,
+    data :temp
+  }
 }
 
 /** 新建规则 PUT /api/rule */
