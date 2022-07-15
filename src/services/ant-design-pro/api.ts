@@ -60,6 +60,7 @@ export async function rule(
   });
   let temp = res?.data?.map(item => {
     item.changeShow = !!Math.round(Math.random());
+    item.name1 = '思否';
     return item;
   })
   return {

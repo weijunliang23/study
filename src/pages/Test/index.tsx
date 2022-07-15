@@ -2,7 +2,7 @@ import { Button } from 'antd';
 import React, { memo, useCallback, useEffect, useMemo, useState } from 'react';
 import { useModel } from 'umi';
 import styles from './index.less';
-const TestChildren: React.FC<{ changShow: () => void; value: number; set: () => void }> = memo(
+const TestChildren: React.FC<{ changShow: () => void; value: number}> = memo(
   ({ changShow, value }) => {
     return (
       <>
@@ -13,12 +13,13 @@ const TestChildren: React.FC<{ changShow: () => void; value: number; set: () => 
   },
 );
 const Test: React.FC = () => {
-  const { add, minus, counter, set } = useModel('test' as any, (ret: any) => ({
-    add: ret.increment,
-    minus: ret.decrement,
-    counter: ret.counter,
-    set: ret.set,
-  }));
+  const { increment, decrement ,counter} = useModel('test')
+
+  //   , (model: any) => ({
+  //   add: model.increment,
+  //   minus: model.decrement,
+  //   counter : model.counter
+  // }));
   const [isChange, setIsChange] = useState(false);
   useEffect(() => {
     if (counter <= 0) {
@@ -28,22 +29,22 @@ const Test: React.FC = () => {
     }
   }, [counter]);
   const changShow = useCallback(() => setIsChange((e) => !e), [counter]);
-  const arr = useMemo(() => Array(2).fill(Math.floor(Math.random() * 5)), [isChange]);
+  const arr = useMemo(() => Array(5).fill(Math.floor(Math.random() * 5)), [isChange]);
 
   return (
     <>
       <div>
-        <Button onClick={add}>add by 1</Button>
-        <Button onClick={minus} disabled={isChange}>
+        <Button onClick={increment}>add by 1</Button>
+        <Button onClick={decrement} disabled={isChange}>
           minus by 1
         </Button>
-        <div className={styles.btnText}> {counter}</div>
+        <div className={styles.text}> {counter}</div>
         {arr.map((item, index) => (
-          <div key={index} className={styles.btnText}>
+          <div key={index}>
             {item}
           </div>
         ))}
-        <TestChildren changShow={changShow} value={counter} set={set} />
+        <TestChildren changShow={changShow} value={counter}  />
       </div>
     </>
   );

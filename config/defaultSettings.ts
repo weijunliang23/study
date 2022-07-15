@@ -15,9 +15,9 @@ const Settings: LayoutSettings & {
   fixedHeader: false,
   fixSiderbar: true,
   colorWeak: false,
-  title: 'Ant Design Pro',
+  title: '康特恩后台管理系统',
   pwa: false,
-  logo: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg',
+  logo: 'http://192.168.180.12/main/img/logo-ktn.8afa6032.png',
   iconfontUrl: '',
 };
 

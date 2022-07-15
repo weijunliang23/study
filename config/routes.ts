@@ -34,7 +34,7 @@ export default [
   {
     path: '/study',
     name: 'study',
-    icon: 'smile',
+    icon: 'edit',
     component: './Study',
     title: '学习小知识',
   },
@@ -42,12 +42,12 @@ export default [
     path: 'https://www.4399.com',
     target: '_blank',
     name: '4399',
-    icon: 'smile',
+    icon: 'delete',
   },
   {
     path: '/welcome',
     name: 'welcome',
-    icon: 'smile',
+    icon: 'user',
     component: './Welcome',
   },
   {
