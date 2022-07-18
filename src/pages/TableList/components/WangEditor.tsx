@@ -12,11 +12,7 @@ function MyEditor(props: propsType) {
 
   // 模拟 ajax 请求，异步设置 html
   useEffect(() => {
-    console.log(editor)
     editor?.focus()
-    // setTimeout(() => {
-    //   setHtml('<p>hello&nbsp;world</p>')
-    // }, 1500)
   }, [])
 
   const toolbarConfig = { }

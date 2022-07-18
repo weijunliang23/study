@@ -39,10 +39,11 @@ export default [
     title: '学习小知识',
   },
   {
-    path: 'https://www.4399.com',
-    target: '_blank',
+    path: '/antv',
     name: '4399',
     icon: 'delete',
+    component: './antv',
+    title: '康特恩后台管理系统'
   },
   {
     path: '/welcome',
