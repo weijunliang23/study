@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 需起个服务，用open with Live server即可，共用进程用self访问window
+    console.log(9527, +new Date());
+    console.log(location.href);
+    const worker = new Worker('./test1.js');
+    worker.onmessage = ((e) => console.log(e))
+    console.log(9528, +new Date());
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="file" onchange="ggsmd()">
+  <script>
+    // 转换图片格式
+    const ggsmd = (e) => {
+      let url;
+      url = document.querySelector('input').files[0];
+      console.log(url);
+      url.type = 'image/png';
+      const src = URL.createObjectURL(url);
+      var myImage = new Image(100, 100);
+      myImage.src = src;
+      document.body.appendChild(myImage);
+      return url;
+    }
+  </script>
+</body>
+
+</html>
