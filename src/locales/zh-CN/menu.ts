@@ -1,5 +1,5 @@
 export default {
-  'menu.welcome': '欢迎',
+  'menu.welcome': '仓储管理',
   'menu.more-blocks': '更多区块',
   'menu.home': '首页',
   'menu.admin': '管理页',
@@ -22,7 +22,7 @@ export default {
   'menu.form.step-form.result': '分步表单（完成）',
   'menu.form.advanced-form': '高级表单',
   'menu.list': '列表页',
-  'menu.list.table-list': '查询表格',
+  'menu.list.table-list': '刊登管理',
   'menu.list.basic-list': '标准列表',
   'menu.list.card-list': '卡片列表',
   'menu.list.search-list': '搜索列表',
@@ -49,7 +49,7 @@ export default {
   'menu.editor.flow': '流程编辑器',
   'menu.editor.mind': '脑图编辑器',
   'menu.editor.koni': '拓扑编辑器',
-  'menu.4399': '4399',
-  'menu.KTE': '康特恩后台管理系统',
-  'menu.study': '我爱学习',
+  'menu.4399': '物流管理',
+  'menu.KTE': '仓配管理',
+  'menu.study': '采购管理',
 };

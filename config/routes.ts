@@ -34,20 +34,21 @@ export default [
   {
     path: '/study',
     name: 'study',
-    icon: 'smile',
+    icon: 'edit',
     component: './Study',
     title: '学习小知识',
   },
   {
-    path: 'https://www.4399.com',
-    target: '_blank',
+    path: '/antv',
     name: '4399',
-    icon: 'smile',
+    icon: 'delete',
+    component: './antv',
+    title: '康特恩后台管理系统'
   },
   {
     path: '/welcome',
     name: 'welcome',
-    icon: 'smile',
+    icon: 'user',
     component: './Welcome',
   },
   {

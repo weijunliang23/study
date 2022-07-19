@@ -15,7 +15,9 @@ import {Button, Drawer, Input, message} from 'antd';
 import React, { useRef, useState } from 'react';
 import type { FormValueType } from './components/UpdateForm';
 import UpdateForm from './components/UpdateForm';
-
+import Modal from './components/Modal'
+import {useModel} from "@@/exports";
+// render(text:当前dataindex对应的数据,record : 当前行数据)
 /**
  * @en-US Add node
  * @zh-CN 添加节点
@@ -96,7 +98,13 @@ const TableList: React.FC = () => {
   const [updateModalVisible, handleUpdateModalVisible] = useState<boolean>(false);
 
   const [showDetail, setShowDetail] = useState<boolean>(false);
-
+  const {setVisibleFn} = useModel('ggsmd')
+  const [record1, setRecord] = useState<API.RuleListItem | null>(null);
+  const changeMyModel = (e: API.RuleListItem)=>{
+    setRecord(e);
+    setVisibleFn()
+    // @ts-ignore
+  }
   const actionRef = useRef<ActionType>();
   const [currentRow, setCurrentRow] = useState<API.RuleListItem>();
   const [selectedRowsState, setSelectedRows] = useState<API.RuleListItem[]>([]);
@@ -244,6 +252,21 @@ const TableList: React.FC = () => {
       valueType: 'switch',
       initialValue : true,
       width: 100
+    },
+    {
+      title : <FormattedMessage id="pages.searchTable.changeSwitch" defaultMessage="changeSwitch"/>,
+      dataIndex:'name1',
+      render : (dom,entity)=>{
+          return (
+            <Button
+              onClick={() => {
+                changeMyModel(entity);
+              }}
+            >
+              {dom}
+            </Button>
+          );
+      }
     }
   ];
 
@@ -396,6 +419,7 @@ const TableList: React.FC = () => {
           />
         )}
       </Drawer>
+      <Modal  record1={record1}></Modal>
     </PageContainer>
   );
 };

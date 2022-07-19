@@ -47,7 +47,8 @@ declare namespace API {
     updatedAt?: string;
     createdAt?: string;
     progress?: number;
-    changeShow : boolean
+    changeShow : boolean,
+    name1 : string
   };
 
   type RuleList = {
